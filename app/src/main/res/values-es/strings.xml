@@ -3,4 +3,11 @@
     <string name="title">Ciclo de vida de la Activity</string>
     <string name="times_format">Veces: %1$d</string>
     <string name="error_message">Se ha producido un error al actualizar el contador</string>
+    <string name="lbl_on_create">onCreate:</string>
+    <string name="lbl_on_start">onStart:</string>
+    <string name="lbl_on_restart">onRestart:</string>
+    <string name="lbl_on_resume">onResume:</string>
+    <string name="lbl_on_pause">onPause:</string>
+    <string name="lbl_on_stop">onStop:</string>
+    <string name="lbl_on_destroy">onDestroy:</string>
 </resources>

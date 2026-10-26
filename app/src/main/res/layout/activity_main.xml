@@ -1,62 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
             android:text="@string/title"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:paddingBottom="16dp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1">
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
 
-            <TableRow android:paddingBottom="12dp">
-                <TextView android:id="@+id/tvOnCreateLabel" android:text="onCreate()" android:textSize="18sp" />
-                <TextView android:id="@+id/tvOnCreateCount" android:textSize="18sp" android:gravity="end" />
-            </TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_on_create"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <TableRow android:paddingBottom="12dp">
-                <TextView android:id="@+id/tvOnStartLabel" android:text="onStart()" android:textSize="18sp" />
-                <TextView android:id="@+id/tvOnStartCount" android:textSize="18sp" android:gravity="end" />
-            </TableRow>
+            <TextView
+                android:id="@+id/tvOnCreateCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Times: 0" />
+        </LinearLayout>
 
-            <TableRow android:paddingBottom="12dp">
-                <TextView android:id="@+id/tvOnRestartLabel" android:text="onRestart()" android:textSize="18sp" />
-                <TextView android:id="@+id/tvOnRestartCount" android:textSize="18sp" android:gravity="end" />
-            </TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
 
-            <TableRow android:paddingBottom="12dp">
-                <TextView android:id="@+id/tvOnResumeLabel" android:text="onResume()" android:textSize="18sp" />
-                <TextView android:id="@+id/tvOnResumeCount" android:textSize="18sp" android:gravity="end" />
-            </TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_on_start"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <TableRow android:paddingBottom="12dp">
-                <TextView android:id="@+id/tvOnPauseLabel" android:text="onPause()" android:textSize="18sp" />
-                <TextView android:id="@+id/tvOnPauseCount" android:textSize="18sp" android:gravity="end" />
-            </TableRow>
+            <TextView
+                android:id="@+id/tvOnStartCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Times: 0" />
+        </LinearLayout>
 
-            <TableRow android:paddingBottom="12dp">
-                <TextView android:id="@+id/tvOnStopLabel" android:text="onStop()" android:textSize="18sp" />
-                <TextView android:id="@+id/tvOnStopCount" android:textSize="18sp" android:gravity="end" />
-            </TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
 
-            <TableRow android:paddingBottom="12dp">
-                <TextView android:id="@+id/tvOnDestroyLabel" android:text="onDestroy()" android:textSize="18sp" />
-                <TextView android:id="@+id/tvOnDestroyCount" android:textSize="18sp" android:gravity="end" />
-            </TableRow>
-        </TableLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_on_restart"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOnRestartCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Times: 0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_on_resume"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOnResumeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Times: 0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_on_pause"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOnPauseCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Times: 0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_on_stop"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOnStopCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Times: 0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_on_destroy"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOnDestroyCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Times: 0" />
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

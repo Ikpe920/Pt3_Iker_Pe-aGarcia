@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="16dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow android:paddingBottom="12dp">
+                <TextView android:id="@+id/tvOnCreateLabel" android:text="onCreate()" android:textSize="18sp" />
+                <TextView android:id="@+id/tvOnCreateCount" android:textSize="18sp" android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="12dp">
+                <TextView android:id="@+id/tvOnStartLabel" android:text="onStart()" android:textSize="18sp" />
+                <TextView android:id="@+id/tvOnStartCount" android:textSize="18sp" android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="12dp">
+                <TextView android:id="@+id/tvOnRestartLabel" android:text="onRestart()" android:textSize="18sp" />
+                <TextView android:id="@+id/tvOnRestartCount" android:textSize="18sp" android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="12dp">
+                <TextView android:id="@+id/tvOnResumeLabel" android:text="onResume()" android:textSize="18sp" />
+                <TextView android:id="@+id/tvOnResumeCount" android:textSize="18sp" android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="12dp">
+                <TextView android:id="@+id/tvOnPauseLabel" android:text="onPause()" android:textSize="18sp" />
+                <TextView android:id="@+id/tvOnPauseCount" android:textSize="18sp" android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="12dp">
+                <TextView android:id="@+id/tvOnStopLabel" android:text="onStop()" android:textSize="18sp" />
+                <TextView android:id="@+id/tvOnStopCount" android:textSize="18sp" android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="12dp">
+                <TextView android:id="@+id/tvOnDestroyLabel" android:text="onDestroy()" android:textSize="18sp" />
+                <TextView android:id="@+id/tvOnDestroyCount" android:textSize="18sp" android:gravity="end" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
